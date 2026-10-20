@@ -46,3 +46,11 @@ assignments are provided with the package in [src/bin/expr.rs](src/bin/expr.rs).
 cargo run --bin expr -- '2 * x + 19' x=12
 ```
 
+That will output:
+
+```
+   Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.14s
+     Running `target/debug/expr '2*x+19' x=12`
+43
+```
+

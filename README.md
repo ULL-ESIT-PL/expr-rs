@@ -56,3 +56,15 @@ That will output:
 43
 ```
 
+Other examples:
+
+```bash
+➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- '-x' x=12   
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+     Running `target/debug/expr -x x=12`
+-12
+➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- '2*(x-9)' x=12
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running `target/debug/expr '2*(x-9)' x=12`
+6
+```

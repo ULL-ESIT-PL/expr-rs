@@ -1,8 +1,8 @@
 name: Rust checks
 on:
-  pull_request:
+  push:
     branches:
-      - master
+      - learning
 jobs:
   build:
     name: Build Crate

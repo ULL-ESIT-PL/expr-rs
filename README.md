@@ -72,7 +72,7 @@ Other examples:
 ## The Abstract Syntax Tree
 
 Parsing an expression produces an abstract syntax tree (AST), represented by
-the public `ExprTree` enum in `src/tree.rs`. Each variant represents one kind of
+the public `ExprTree` enum in [src/tree.rs](src/tree.rs). Each variant represents one kind of
 expression:
 
 | Variant                             | Meaning |

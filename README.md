@@ -81,10 +81,6 @@ See [docs/parser/README.md](docs/parser/README.md) for a description of the pars
 
 See [docs/tree/README.md](/docs/tree/README.md) for a description of the abstract syntax tree at [src/tree.rs](src/tree.rs) and how trees are evaluated.
 
-## The src/eval.rs file
-
-The file [src/eval.rs](src/eval.rs) contains the implementation of the `eval` function that evaluates expressions.
-
 ## The root library src/lib.rs
 
 The file [src/lib.rs](src/lib.rs) is the root of the `expr` library crate. It

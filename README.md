@@ -39,6 +39,8 @@ fn main() {
 }
 ```
 
+## Sample Application src/bin/expr.rs
+
 A sample application that just evaluates the expression with optional
 assignments are provided with the package in [src/bin/expr.rs](src/bin/expr.rs). To execute it, run the following command:
 

@@ -102,4 +102,8 @@ appropriate.
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/expr '2/(x-9)' x=9`
 inf
+➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- '0/(x-9)' x=9
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
+     Running `target/debug/expr '0/(x-9)' x=9`
+NaN
 ```

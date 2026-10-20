@@ -19,6 +19,7 @@ Antes de usarlo en clase, corregiría dos detalles del material:
 
 1. El ejemplo del README tiene el error `map`/`vars`, y 
 2. en `tokens.rs` un carácter desconocido al final puede tratarse como fin de entrada. Por ejemplo, una expresión como `1@` podría aceptarse como `1`. También hay un comentario que menciona *shunting-yard*, aunque el parser implementa descenso recursivo.
+   - Fixed at commit 812847e
 
 ### Resumen
 

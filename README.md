@@ -40,5 +40,9 @@ fn main() {
 ```
 
 A sample application that just evaluates the expression with optional
-assignments are provided with the package.
+assignments are provided with the package in [src/bin/expr.rs](src/bin/expr.rs). To execute it, run the following command:
+
+```bash
+cargo run --bin expr -- '2 * x + 19' x=12
+```
 

@@ -1,3 +1,6 @@
+// Execute with:
+// cd recdescent/mkindahl-expr-rs
+// cargo run --bin expr -- '2 * x + 19' x=12
 extern crate expr;
 
 use expr::eval;

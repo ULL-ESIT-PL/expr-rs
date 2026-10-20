@@ -125,14 +125,18 @@ impl<'a> Iterator for Tokenizer<'a> {
                 self.skip(1);
                 Some(Token::Close)
             }
-            None | Some(_) => None,
+            Some(_) => {
+                self.skip(1);
+                Some(Token::Error)
+            }
+            None => None,
         }
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::Token::{Float, Minus, Plus, Slash, Star, Symbol};
+    use super::Token::{Error, Float, Minus, Plus, Slash, Star, Symbol};
     use super::*;
     //    use test::{black_box, Bencher};
 
@@ -182,6 +186,11 @@ mod tests {
         assert_tokens("012.2", vec![Float(12.2)]);
         assert_tokens("00000012.2", vec![Float(12.2)]);
         assert_tokens("000012.2", vec![Float(12.2)]);
+    }
+
+    #[test]
+    fn invalid_character() {
+        assert_tokens("1@", vec![Float(1.0), Error]);
     }
 
     // #[bench]

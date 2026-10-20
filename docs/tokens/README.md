@@ -14,7 +14,7 @@ can be converted into the sequence of tokens:
 Float(2.0), Star, Symbol("x"), Plus, Float(19.0)
 ```
 
-This first step is called **tokenization** or **lexical analysis**. The parser then reads the tokens and builds a syntax tree. The task of the tokenizer is to recognize the pieces of the language. The file [src/tokenizer.rs](src/tokenizer.rs) contains the implementation of the tokenizer.
+This first step is called **tokenization** or **lexical analysis**. The parser then reads the tokens and builds a syntax tree. The task of the tokenizer is to recognize the pieces of the language. The file [/src/tokenizer.rs](/src/tokenizer.rs) contains the implementation of the tokenizer.
 
 ## 1. The `Token` enum
 

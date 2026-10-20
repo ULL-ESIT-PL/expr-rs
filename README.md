@@ -68,3 +68,39 @@ Other examples:
      Running `target/debug/expr '2*(x-9)' x=12`
 6
 ```
+
+## The Abstract Syntax Tree
+
+Parsing an expression produces an abstract syntax tree (AST), represented by
+the public `ExprTree` enum in `src/tree.rs`. Each variant represents one kind of
+expression:
+
+| Variant                             | Meaning |
+| ---                                 | --- |
+| `Float(f64)`                        | A numeric literal |
+| `Var(String)`                       | A variable name |
+| `Neg(Box<ExprTree>)`                | Unary negation |
+| `Add(Box<ExprTree>, Box<ExprTree>)` | Addition |
+| `Sub(Box<ExprTree>, Box<ExprTree>)` | Subtraction |
+| `Mul(Box<ExprTree>, Box<ExprTree>)` | Multiplication |
+| `Div(Box<ExprTree>, Box<ExprTree>)` | Division |
+
+For example, parsing `2 * (x - 9)` produces a tree equivalent to:
+
+```text
+Mul
+├── Float(2.0)
+└── Sub
+    ├── Var("x")
+    └── Float(9.0)
+```
+
+The parentheses do not need their own AST node: they determine how the
+expression is grouped, which is reflected by the tree's structure. The parser
+also encodes operator precedence in the tree, so multiplication and division
+form subtrees beneath addition and subtraction when appropriate.
+
+`Box<ExprTree>` provides indirection for child expressions. This lets the
+recursive enum have a finite size while still representing trees of arbitrary
+depth. Once parsed, an `ExprTree` can be evaluated with `eval`, inspected, or
+manipulated.

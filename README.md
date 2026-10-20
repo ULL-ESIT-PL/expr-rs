@@ -71,15 +71,54 @@ Other examples:
 
 ## The Tokenizer
 
-See [docs/tokens/README.md](docs/tokens/README.md) for a description of the tokenizer and how it works.
+See [docs/tokens/README.md](docs/tokens/README.md) for a description of the tokenizer at [src/tokens.rs](src/tokens.rs) and how it works.
 
 ## The Parser
 
-See [docs/parser/README.md](docs/parser/README.md) for a description of the parser and how it works.
+See [docs/parser/README.md](docs/parser/README.md) for a description of the parser at [src/parser.rs](src/parser.rs) and how it works.
 
 ## The Abstract Syntax Tree
 
-See [docs/tree/README.md](/docs/tree/README.md) for a description of the abstract syntax tree and how it can be evaluated and
+See [docs/tree/README.md](/docs/tree/README.md) for a description of the abstract syntax tree at [src/tree.rs](src/tree.rs) and how trees are evaluated.
+
+## The root library src/lib.rs
+
+The file [src/lib.rs](src/lib.rs) is the root of the `expr` library crate. It
+connects the tokenizer, parser, and expression tree, and defines the API that
+other Rust code can use.
+
+It declares the `parser`, `tokens`, and `tree` modules as public. It also
+re-exports `parse` from the parser module, so a library user can write
+`expr::parse(...)` instead of `expr::parser::parse(...)`.
+
+The library provides two ways to work with expressions:
+
+- `parse(expression)` parses the input and returns an `ExprTree`, which can be
+  inspected, manipulated, or evaluated.
+- `eval(expression, variables)` parses and evaluates an expression in one
+  step, using a `HashMap<String, f64>` to supply variable values.
+
+The root `Error` enum brings parser errors and evaluation errors together.
+Consequently, `eval` returns the library's `Result<f64>` and can report either
+kind of failure.
+
+For example, a program using the library can evaluate an expression directly:
+
+```rust
+use expr::eval;
+use std::collections::HashMap;
+
+let mut variables = HashMap::new();
+variables.insert("x".to_string(), 12.0);
+
+let value = eval("2 * x + 19", &variables).unwrap();
+assert_eq!(value, 43.0);
+```
+
+The library root is not the executable's entry point. The command-line
+application has its own `main` function in [src/bin/expr.rs](src/bin/expr.rs)
+and uses the API exposed by this library.
+
 
 ## Authorship
 

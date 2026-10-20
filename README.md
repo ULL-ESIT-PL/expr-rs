@@ -1,4 +1,4 @@
-# expr-rs: recursive decent expression parser
+# expr-rs: recursive descent expression parser
 
 An implementation of an simple expression parser with a focus on being
 fast, compact, simple to embed, and with a minimum of

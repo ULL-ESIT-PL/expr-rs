@@ -79,39 +79,7 @@ See [docs/parser/README.md](docs/parser/README.md) for a description of the pars
 
 ## The Abstract Syntax Tree
 
-Parsing an expression produces an abstract syntax tree (AST), represented by
-the public `ExprTree` enum in [src/tree.rs](src/tree.rs). Each variant represents one kind of
-expression:
-
-| Variant                             | Meaning |
-| ---                                 | --- |
-| `Float(f64)`                        | A numeric literal |
-| `Var(String)`                       | A variable name |
-| `Neg(Box<ExprTree>)`                | Unary negation |
-| `Add(Box<ExprTree>, Box<ExprTree>)` | Addition |
-| `Sub(Box<ExprTree>, Box<ExprTree>)` | Subtraction |
-| `Mul(Box<ExprTree>, Box<ExprTree>)` | Multiplication |
-| `Div(Box<ExprTree>, Box<ExprTree>)` | Division |
-
-For example, parsing `2 * (x - 9)` produces a tree equivalent to:
-
-```text
-Mul
-├── Float(2.0)
-└── Sub
-    ├── Var("x")
-    └── Float(9.0)
-```
-
-The parentheses do not need their own AST node: they determine how the
-expression is grouped, which is reflected by the tree's structure. The parser
-also encodes operator precedence in the tree, so multiplication and division
-form subtrees beneath addition and subtraction when appropriate.
-
-`Box<ExprTree>` provides indirection for child expressions. This lets the
-recursive enum have a finite size while still representing trees of arbitrary
-depth. Once parsed, an `ExprTree` can be evaluated with `eval`, inspected, or
-manipulated.
+See [docs/tree/README.md](/docs/tree/README.md) for a description of the abstract syntax tree and how it can be evaluated and
 
 ## Authorship
 

@@ -104,3 +104,7 @@ form subtrees beneath addition and subtraction when appropriate.
 recursive enum have a finite size while still representing trees of arbitrary
 depth. Once parsed, an `ExprTree` can be evaluated with `eval`, inspected, or
 manipulated.
+
+## Authorship
+
+This is a fork of [mkindahl/expr-rs](https://github.com/mkindahl/expr-rs).

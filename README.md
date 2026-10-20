@@ -69,6 +69,14 @@ Other examples:
 6
 ```
 
+## The Tokenizer
+
+See [docs/tokens/README.md](docs/tokens/README.md) for a description of the tokenizer and how it works.
+
+## The Parser
+
+See [docs/parser/README.md](docs/parser/README.md) for a description of the parser and how it works.
+
 ## The Abstract Syntax Tree
 
 Parsing an expression produces an abstract syntax tree (AST), represented by

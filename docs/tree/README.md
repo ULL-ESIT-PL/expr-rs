@@ -96,3 +96,10 @@ Calling `eval` consumes `tree`, because its receiver is `self` rather than
 by zero is not reported as an `ExprTree` evaluation error: the operation uses
 Rust's `f64` arithmetic, which produces floating-point infinity or NaN as
 appropriate.
+
+```bash
+➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- '2/(x-9)' x=9 
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.30s
+     Running `target/debug/expr '2/(x-9)' x=9`
+inf
+```

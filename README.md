@@ -65,10 +65,11 @@ Other examples:
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.16s
      Running `target/debug/expr -x x=12`
 -12
-➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- '2*(x-9)' x=12
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.12s
-     Running `target/debug/expr '2*(x-9)' x=12`
-6
+➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- 'y*x' x=4 y=8
+   Compiling expr v0.1.0 (/Users/casianorodriguezleon/campus-virtual/2627/learning/rust/recdescent-rust/recdescent/mkindahl-expr-rs)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.96s
+     Running `target/debug/expr 'y*x' x=4 y=8`
+32
 ```
 
 The core of the [src/bin/expr.rs](/src/bin/expr.rs) file is just a few lines of code that parse the command line arguments, call the library's `eval` function, and print the result. The library handles all parsing and evaluation.

@@ -48,6 +48,8 @@ assignments are provided with the package in [src/bin/expr.rs](src/bin/expr.rs).
 cargo run --bin expr -- '2 * x + 19' x=12
 ```
 
+By default `cargo run` will build and execute the default binary, which is `src/main.rs`. The `--bin expr` option tells Cargo to build and run the `expr` binary instead. The `--` option separates the arguments to the binary from the arguments to Cargo itself. The folder `src/bin/` is also scanned automatically for binary targets. If the code is in `src/bin/expr.rs` or `src/bin/expr/main.rs`, Cargo will recognize it as a binary target named `expr`. The first argument after `--` is the expression to evaluate, and any subsequent arguments are variable assignments in the form `<variable>=<value>`.
+
 That will output:
 
 ```
@@ -72,8 +74,6 @@ Other examples:
 The core of the [src/bin/expr.rs](/src/bin/expr.rs) file is just a few lines of code that parse the command line arguments, call the library's `eval` function, and print the result. The library handles all parsing and evaluation.
 
 ```rs 
-extern crate expr; // The library crate is called `expr`
-
 use expr::eval;  // The library provides a single function `eval` 
 use std::collections::HashMap; // Use a HashMap to provide variable values
 use std::env::args;

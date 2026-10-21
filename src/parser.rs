@@ -19,7 +19,7 @@ use crate::tree::ExprTree;
 /// # Example
 ///
 /// ```
-/// # use expr::parse;
+/// # use crguezl_expr::parse;
 /// # use std::collections::HashMap;
 /// let tree = parse("x + 10").unwrap();
 /// let mut map = HashMap::new();

@@ -2,7 +2,7 @@
 // cd recdescent/mkindahl-expr-rs
 // cargo run --bin expr -- '2 * x + 19' x=12
 
-use expr::eval;
+use crguezl_expr::eval;
 use std::collections::HashMap;
 use std::env::args;
 

@@ -1,10 +1,10 @@
 [package]
-name = "expr"
+name = "crguezl-expr"
 version = "0.1.0"
 authors = ["Mats Kindahl <mats.kindahl@gmail.com>", "Casiano Rodriguez-Leon <crguezl@ull.edu.es"]
 description = "Example of Recursive descent expression parser used for teaching."
-documentation = "http://docs.rs/expr-rs"
-repository = "https://github.com/mkindahl/expr-rs"
+documentation = "https://docs.rs/crguezl-expr"
+repository = "https://github.com/ULL-ESIT-PL/expr-rs"
 license = "Apache-2.0"
 keywords = ["expression", "parser"]
 edition = "2024"

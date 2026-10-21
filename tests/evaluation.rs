@@ -1,11 +1,11 @@
-extern crate expr;
-extern crate matches;
+//extern crate crguezl_expr;
+//extern crate matches;
 
-use expr::eval;
-use expr::parser::Error::*;
-use expr::tokens::Token;
-use expr::tree::Error::*;
-use expr::Error::*;
+use crguezl_expr::eval;
+use crguezl_expr::parser::Error::*;
+use crguezl_expr::tokens::Token;
+use crguezl_expr::tree::Error::*;
+use crguezl_expr::Error::*;
 use matches::assert_matches;
 use std::collections::HashMap;
 

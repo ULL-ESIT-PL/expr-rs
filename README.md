@@ -7,7 +7,7 @@ tree. The tree can then be evaluated, inspected, or manipulated.
 
 ## The project file `Cargo.toml`
 
-The file [Cargo.toml](Cargo.toml) ("toml" = "Tom's Obvious, Minimal Language") is the project file for the Rust package manager Cargo. It contains metadata about the project, including its name, version, authors, description, and dependencies. The `include` section specifies which files should be included when publishing the crate. See section [/docs/cargo/README.md](docs/cargo/README.md) for more information about the project file.
+The file [Cargo.toml](Cargo.toml) ("toml" = "Tom's Obvious, Minimal Language") is the project file for the Rust package manager [Cargo](https://doc.rust-lang.org/cargo/guide/). It contains metadata about the project, including its name, version, authors, description, and dependencies. The `include` section specifies which files should be included when publishing the crate. See section [/docs/cargo/README.md](docs/cargo/README.md) for more information about the project file.
 
 
 
@@ -31,7 +31,7 @@ standard library to be as lightweight as possible. A typical usage
 can be found in the [examples/evaluate.rs](examples/evaluate.rs) file:
 
 ```rust
-use expr::parse;
+use crguezl_expr::parse;
 use std::collections::HashMap;
 
 fn main() {
@@ -82,7 +82,7 @@ Other examples:
      Running `target/debug/expr -x x=12`
 -12
 ➜  mkindahl-expr-rs git:(learning) cargo run --bin expr -- 'y*x' x=4 y=8
-   Compiling expr v0.1.0 (/Users/casianorodriguezleon/campus-virtual/2627/learning/rust/recdescent-rust/recdescent/mkindahl-expr-rs)
+   Compiling crguezl-expr v0.1.0 (/Users/casianorodriguezleon/campus-virtual/2627/learning/rust/recdescent-rust/recdescent/mkindahl-expr-rs)
     Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.96s
      Running `target/debug/expr 'y*x' x=4 y=8`
 32
@@ -91,7 +91,7 @@ Other examples:
 The core of the [src/bin/expr.rs](/src/bin/expr.rs) file is just a few lines of code that parse the command line arguments, call the library's `eval` function, and print the result. The library handles all parsing and evaluation.
 
 ```rs 
-use expr::eval;  // The library provides a single function `eval` 
+use crguezl_expr::eval;  // The library provides a single function `eval` 
 use std::collections::HashMap; // Use a HashMap to provide variable values
 use std::env::args;
 
@@ -132,7 +132,7 @@ other Rust code can use.
 
 It declares the `parser`, `tokens`, and `tree` modules as public. It also
 re-exports `parse` from the parser module, so a library user can write
-`expr::parse(...)` instead of `expr::parser::parse(...)`.
+`crguezl_expr::parse(...)` instead of `crguezl_expr::parser::parse(...)`.
 
 The library provides two ways to work with expressions:
 
@@ -148,7 +148,7 @@ kind of failure.
 For example, a program using the library can evaluate an expression directly:
 
 ```rust
-use expr::eval;
+use crguezl_expr::eval;
 use std::collections::HashMap;
 
 let mut variables = HashMap::new();

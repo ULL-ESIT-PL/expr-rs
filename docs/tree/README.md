@@ -80,7 +80,7 @@ back up through its parent nodes to the caller.
 Here is a complete example:
 
 ```rust
-use expr::parse;
+use crguezl_expr::parse;
 use std::collections::HashMap;
 
 let tree = parse("2 * x + 19").unwrap();

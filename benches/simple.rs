@@ -1,9 +1,5 @@
-#[macro_use]
-extern crate criterion;
-extern crate expr;
-
-use criterion::Criterion;
-use expr::eval;
+use criterion::{criterion_group, criterion_main, Criterion};
+use crguezl_expr::eval;
 use std::collections::HashMap;
 
 fn bench_simple(c: &mut Criterion) {

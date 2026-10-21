@@ -64,6 +64,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "crguezl-expr"
+version = "0.1.0"
+dependencies = [
+ "criterion",
+ "matches",
+]
+
+[[package]]
 name = "criterion"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -150,14 +158,6 @@ name = "either"
 version = "1.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0e9c71c2167ca323c882b99918929403426e2373ea17242ff5653e0d5e1058be"
-
-[[package]]
-name = "expr"
-version = "0.1.0"
-dependencies = [
- "criterion",
- "matches",
-]
 
 [[package]]
 name = "futures-core"

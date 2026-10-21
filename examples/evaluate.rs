@@ -1,6 +1,6 @@
 // Execute with:
 // cargo run  --example evaluate
-use expr::parse;
+use crguezl_expr::parse;
 use std::collections::HashMap;
 
 fn main() {

@@ -158,4 +158,4 @@ and uses the API exposed by this library.
 
 ## Authorship
 
-This is a fork of [mkindahl/expr-rs](https://github.com/mkindahl/expr-rs).
+This is a fork of [mkindahl/expr-rs](https://github.com/mkindahl/expr-rs). See also [LICENSE](LICENSE) for licensing information. The original author is Mats Kindahl, and this fork is maintained by Casiano Rodriguez-Leon.

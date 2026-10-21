@@ -69,6 +69,32 @@ Other examples:
 6
 ```
 
+The core of the [src/bin/expr.rs](/src/bin/expr.rs) file is just a few lines of code that parse the command line arguments, call the library's `eval` function, and print the result. The library handles all parsing and evaluation.
+
+```rs 
+extern crate expr; // The library crate is called `expr`
+
+use expr::eval;  // The library provides a single function `eval` 
+use std::collections::HashMap; // Use a HashMap to provide variable values
+use std::env::args;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let args = args().collect::<Vec<String>>();
+    if args.len() < 2 {
+        println!("Usage: expr <expression> [ <variable>=<value> ... ]");
+    } else {
+        let expr = &args[1];
+        let mut map = HashMap::new();
+        for assign in &args[2..] {
+            let parts: Vec<&str> = assign.splitn(2, '=').collect();
+            map.insert(parts[0].to_string(), parts[1].parse::<f64>()?);
+        }
+        println!("{}", eval(expr.as_str(), &map)?);
+    }
+    Ok(())
+}
+```
+
 ## The Tokenizer
 
 See [docs/tokens/README.md](docs/tokens/README.md) for a description of the tokenizer at [src/tokens.rs](src/tokens.rs) and how it works.

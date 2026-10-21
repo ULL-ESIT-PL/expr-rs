@@ -5,6 +5,13 @@ fast, compact, simple to embed, and with a minimum of
 dependencies. The parser reads a string to build an expression
 tree. The tree can then be evaluated, inspected, or manipulated.
 
+## The project file `Cargo.toml`
+
+The file [Cargo.toml](Cargo.toml) ("toml" = "Tom's Obvious, Minimal Language") is the project file for the Rust package manager Cargo. It contains metadata about the project, including its name, version, authors, description, and dependencies. The `include` section specifies which files should be included when publishing the crate. See section [/docs/cargo/README.md](docs/cargo/README.md) for more information about the project file.
+
+
+
+
 ## Grammar
 
 The grammar of expressions is straightforward and (currently) quite

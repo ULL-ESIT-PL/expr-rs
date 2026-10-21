@@ -36,8 +36,8 @@ impl std::error::Error for Error {
 impl std::fmt::Display for Error {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Error::Parser(ref err) => write!(f, "parse error: {}", err),
-            Error::Eval(ref err) => write!(f, "eval error: {}", err),
+            Error::Parser(err) => write!(f, "parse error: {}", err),
+            Error::Eval(err) => write!(f, "eval error: {}", err),
         }
     }
 }

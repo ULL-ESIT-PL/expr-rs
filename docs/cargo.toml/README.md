@@ -12,7 +12,7 @@ The description of the syntax and semantics of the Cargo file can be found at [h
 - `authors = ["Mats Kindahl <mats.kindahl@gmail.com>", "Casiano Rodriguez-Leon <crguezl@ull.edu.es"]`: The authors of the package. This is a list of strings, each containing the name and email address of an author.
 - `description = "Example of Recursive descent expression parser used for teaching."`: A short description of the package. This is used when publishing the crate to [https://crates.io](https://crates.io).
 - `documentation = "https://docs.rs/crguezl-expr"`: The URL of the documentation for the package. This is used when publishing the crate to [https://crates.io](https://crates.io).
-- `edition = "2024"`: The `edition` key is an optional key that affects which Rust Edition your package is compiled with. Setting the edition key in [package] will affect all targets/crates in the package, including test suites, benchmarks, binaries, examples, etc. Most manifests have the `edition` field filled in automatically by [cargo new](https://doc.rust-lang.org/cargo/commands/cargo-new.html) with the latest stable edition. 
+- `edition = "2024"`: The `edition` key is an optional key that affects which Rust Edition your package is compiled with. Setting the edition key in `[package]` will affect all targets/crates in the package, including test suites, benchmarks, binaries, examples, etc. Most manifests have the `edition` field filled in automatically by [cargo new](https://doc.rust-lang.org/cargo/commands/cargo-new.html) with the latest stable edition. 
 If the `edition` field is not present in [Cargo.toml](../../Cargo.toml), then the 2015 edition is assumed for backwards compatibility. 
 
 
@@ -22,7 +22,7 @@ If the `edition` field is not present in [Cargo.toml](../../Cargo.toml), then th
 [dependencies]: There are no dependencies declared in the Cargo.toml file, which means that the crate does not depend on any external crates. This is important because it means that the crate can be used without having to install any additional crates, and it also means that there are
 no hay dependencias de runtime. 
 
-[[bin]]: Not declared, but since there is a src/main.rs file, Cargo automatically detects it as a binary named expr.
+[[[bin]]](https://doc.rust-lang.org/cargo/reference/cargo-targets.html#binaries): Not declared, but since there is a src/main.rs file, Cargo automatically detects it as a binary named expr.
 
 [lib]: no se declara, pero si existe src/lib.rs, Cargo lo auto-detecta como biblioteca expr.
 

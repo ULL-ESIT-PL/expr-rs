@@ -31,7 +31,7 @@ no hay dependencias de runtime.
 
 ## Exercise: run cargo metadata
 
-Run
+Run [cargo metadata](https://doc.rust-lang.org/cargo/commands/cargo-metadata.html) to see the metadata of the package in JSON format. This can be useful for debugging and understanding the package's dependencies and structure.
 
 ```
 cargo metadata | jless

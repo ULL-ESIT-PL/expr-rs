@@ -24,7 +24,9 @@ no hay dependencias de runtime.
 
 [[[bin]]](https://doc.rust-lang.org/cargo/reference/cargo-targets.html#binaries): Not declared, but since there is a src/main.rs file, Cargo automatically detects it as a binary named expr.
 
-[lib]: no se declara, pero si existe src/lib.rs, Cargo lo auto-detecta como biblioteca expr.
+[[lib]](https://doc.rust-lang.org/cargo/reference/cargo-targets.html#library): Not declared, but since there is a `src/lib.rs` file, Cargo automatically detects it as a library named `crguezl_expr`. The name of the library is derived from the name of the package, with hyphens replaced by underscores. This is important because it means that the library can be used by other crates without having to specify a name in the `Cargo.toml` file.
+
+
 
 ## Exercise: run cargo metadata
 

@@ -19,7 +19,7 @@ If the `edition` field is not present in [Cargo.toml](../../Cargo.toml), then th
 
 ### What does not appear and why it matters
 
-[dependencies]: There are no dependencies declared in the Cargo.toml file, which means that the crate does not depend on any external crates. This is important because it means that the crate can be used without having to install any additional crates, and it also means that there are
+[[dependencies]](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html): There are no dependencies declared in the Cargo.toml file, which means that the crate does not depend on any external crates. This is important because it means that the crate can be used without having to install any additional crates, and it also means that there are
 no hay dependencias de runtime. 
 
 [[[bin]]](https://doc.rust-lang.org/cargo/reference/cargo-targets.html#binaries): Not declared, but since there is a src/main.rs file, Cargo automatically detects it as a binary named expr.

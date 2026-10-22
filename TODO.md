@@ -1,0 +1,6 @@
+- GitHub Org
+- Upgrade
+- C50 classroom
+- 1st assignment with grading
+- Pasar la documentación a mdbook?
+- Hacer al menos 3 C50-assignments a partir de esta solución. Los primeros para aprender Rust, cargo, y el resto para aprender a hacer un parser recursivo descendente.

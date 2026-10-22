@@ -1,8 +1,9 @@
 # The Cargo.toml file
 
-The file [Cargo.toml](../../Cargo.toml) governs the build of this crate. You can publish the crate to [crates.io](https://crates.io) with `cargo publish`. The documentation of the `cargo` command is available at [https://doc.rust-lang.org/cargo/guide/](https://doc.rust-lang.org/cargo/guide/).
+The file [Cargo.toml](../../Cargo.toml) governs the build of this crate. You can publish the crate to [crates.io](https://crates.io) with `cargo publish`. 
 
-The description of the syntax and semantics of the Cargo file can be found at [https://doc.rust-lang.org/cargo/reference/manifest.html](https://doc.rust-lang.org/cargo/reference/manifest.html).
+- The documentation of the `cargo` command is available at [https://doc.rust-lang.org/cargo/guide/](https://doc.rust-lang.org/cargo/guide/).
+- The description of the syntax and semantics of the Cargo file can be found at [https://doc.rust-lang.org/cargo/reference/manifest.html](https://doc.rust-lang.org/cargo/reference/manifest.html).
 
 
 ## [package] section: Metadata about the package
